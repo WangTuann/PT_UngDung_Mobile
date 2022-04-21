@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM</title>
+    <style>
+        Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  
+}  
+button {   
+       background-color: #f1f1f1;   
+       width: 50%;  
+        color: #858282;   
+        padding: 15px;   
+        margin: auto;   
+        border: none;   
+        cursor: pointer;   
+        margin-left: 100px;
+         }   
+         
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+    
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+ 
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }  
+    </style>
+  </head>
+  <body>
+    <h1>ATM LOGIN</h1>
+      <br class="container">
+        <label>Username : </label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          id="email"
+          required
+        />      </br>
+        <label>Password : </label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="password"
+          required
+        /> </br>
+        <button type="button"  id="test" onclick="validateEmail_Password()">LOGIN</button></div>
+      </div>
+    </form>
+  </body>
+  <script>
+    function validateEmail_Password(inputEmail,inputPassword) {
+        var email=document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+        var emailFormat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var passFormat=/^(?=.*[0-9])/;
+        if (email==""||password=="") {
+          alert('Vui lòng nhập email và mật khẩu');
+        }
+          else{
+        if (email.match(emailFormat)&&password.match(passFormat)) {
+          if (email == "1910152@dlu.edu.vn" && password=="12345678" ) {
+              alert('Đăng nhập thành công! '+'Xin chào '+email)
+           }
+           else{
+              alert('Đăng nhập thất bại! Vui lòng thử lại sau');
+            }
+        }   
+        else{
+          alert('Vui lòng nhập đúng email theo dạng ...@gmail.com hoặc mật khẩu đủ 8 số')
+        }
+        }
+    }
+    
+  </script>
+</html>
+
+
