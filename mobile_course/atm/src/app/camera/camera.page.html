@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button
+    expand="block"
+    color="light"
+    (click)="takePicture()"
+    defaultRef="/camera"
+    >Chụp hình</ion-button
+  >
+
+  <ion-img [src]="path"> </ion-img>
+</ion-content>
