@@ -16,5 +16,8 @@ export class HomePage implements OnInit {
   openCamera() {
     this.router.navigateByUrl('/camera');
   }
+  openMap() {
+    this.router.navigateByUrl('/map');
+  }
   ngOnInit() {}
 }
